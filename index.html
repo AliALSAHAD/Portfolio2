@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>علي الصهد - Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-text">رحلة الإبداع</div>
+</div>
+
+<nav id="navbar">
+  <div class="logo">Ali Alsahad</div>
+  <div class="links">
+    <a href="#about">عنّي</a>
+    <a href="#skills">مهاراتي</a>
+    <a href="#certificates">الشهادات</a>
+    <a href="#work">أعمالي</a>
+    <a href="#contact">تواصل</a>
+    <button id="themeToggle" class="toggle-btn" aria-label="تبديل الوضع الليلي">🌙</button>
+  </div>
+  <div class="availability-badge" id="availabilityBadge">
+    <span class="status-dot"></span>
+    <span class="status-text">متوفر للعمل</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      رحـلة لعالم لاينتهي مـن
+      <br>
+      <span class="highlight">
+        <span id="typedText"></span>
+        <span class="cursor">|</span>
+      </span>
+    </h1>
+    <button class="btn scroll-btn" data-target="#about">اكتشف أكثر</button>
+  </div>
+  
+  <div class="parallax-circle circle-1"></div>
+  <div class="parallax-circle circle-2"></div>
+  <div class="parallax-circle circle-3"></div>
+</section>
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="profile.png" alt="Ali Alsahad" id="profileImage">
+      <div class="image-border"></div>
+    </div>
+    <div class="about-content">
+      <h2>عنّي</h2>
+      <div id="bioText">
+        <p>أنا علي الصهد، طالب علوم حاسب مسار شبكات في جامعة الملك سعود. شغوف بالتقنية وخصوصًا الأمن السيبراني، وأحب أفهم كيف تصير الهجمات وكيف نقدر نحمي الأنظمة منها بطريقة ذكية</p>
+        <p>غير كذا، عندي جانب إبداعي قوي في التصميم الجرافيكي، وأعتبره المساحة اللي أطلع فيها أفكاري بشكل بصري جذاب. أشتغل على تصميم الهويات البصرية، البوسترات الاحترافية، ومحتوى السوشيال ميديا بأسلوب ملفت وسهل التفاعل.</p>
+      </div>
+      <button class="btn scroll-btn" data-target="#skills">استكشف مهاراتي</button>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>مهاراتي</h2>
+  
+  <div class="skills-tabs">
+    <button class="tab-btn active" data-category="design">
+      <i class="fas fa-palette"></i>
+      التصميم الجرافيكي
+    </button>
+    <button class="tab-btn" data-category="ai">
+      <i class="fas fa-brain"></i>
+      الذكاء الاصطناعي
+    </button>
+    <button class="tab-btn" data-category="programming">
+      <i class="fas fa-code"></i>
+      اللغات البرمجية
+    </button>
+    <button class="tab-btn" data-category="security">
+      <i class="fas fa-shield-alt"></i>
+      الأمن السيبراني
+    </button>
+  </div>
+
+  <div class="skills-container" id="skillsContainer"></div>
+  
+  <div class="portfolio-link-section" id="portfolioLinkSection" style="display: none;">
+    <a href="#" class="portfolio-btn" id="portfolioBtn" target="_blank">
+      <i class="fas fa-folder-open"></i>
+      عرض ملف الأعمال الكامل
+    </a>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>الشهادات والمؤهلات</h2>
+  
+  <div class="cert-tabs">
+    <button class="cert-tab-btn active" data-cert-category="education">
+      <i class="fas fa-graduation-cap"></i>
+      التدرج التعليمي
+    </button>
+    <button class="cert-tab-btn" data-cert-category="certificates">
+      <i class="fas fa-certificate"></i>
+      الشهادات المكتسبة
+    </button>
+  </div>
+  
+  <div class="certificates-container" id="certificatesContainer"></div>
+</section>
+
+<section id="work">
+  <h2>أعمالي</h2>
+  
+  <div class="work-tabs">
+    <button class="work-tab-btn active" data-work-category="all">
+      <i class="fas fa-th"></i>
+      الكل
+    </button>
+    <button class="work-tab-btn" data-work-category="design">
+      <i class="fas fa-palette"></i>
+      التصميم
+    </button>
+    <button class="work-tab-btn" data-work-category="ai">
+      <i class="fas fa-robot"></i>
+      الذكاء الاصطناعي
+    </button>
+    <button class="work-tab-btn" data-work-category="programming">
+      <i class="fas fa-laptop-code"></i>
+      البرمجة
+    </button>
+    <button class="work-tab-btn" data-work-category="security">
+      <i class="fas fa-lock"></i>
+      الأمن السيبراني
+    </button>
+  </div>
+  
+  <div class="projects" id="projectsContainer"></div>
+</section>
+
+<section id="contact">
+  <h2>تواصل</h2>
+  <button class="btn" id="contactBtn">راسلني</button>
+
+  <div id="contactOptions" class="contact-options">
+    <a href="mailto:ali.taha.alsahad.696@gmail.com" target="_blank">
+      <i class="fas fa-envelope"></i> البريد الإلكتروني
+    </a>
+    <a href="https://wa.me/0598006016" target="_blank">
+      <i class="fab fa-whatsapp"></i> واتساب
+    </a>
+    <a href="https://www.linkedin.com/in/ali-taha-alsahad/" target="_blank">
+      <i class="fab fa-linkedin"></i> لينكدإن
+    </a>
+  </div>
+</section>
+
+<button id="scrollTopBtn" title="العودة للأعلى" aria-label="العودة للأعلى">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<footer>
+  <div class="footer-content">
+    <div class="social-links">
+      <a href="https://twitter.com/alialsahad" target="_blank" aria-label="تويتر">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ali-taha-alsahad/" target="_blank" aria-label="لينكدإن">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/0598006016" target="_blank" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/alialsahad" target="_blank" aria-label="جيتهاب">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <p>© 2026 جميع الحقوق محفوظة | تصميم وتنفيذ: Ali Alsahad</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
